@@ -8,10 +8,6 @@
     <artifactId>Test1</artifactId>
     <version>1.0-SNAPSHOT</version>
 
-    dependencies {
-    compile 'org.seleniumhq.selenium:selenium-java:3.7.1'
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-    }
     <!-- https://mvnrepository.com/artifact/junit/junit -->
     <dependencies>
     <dependency>

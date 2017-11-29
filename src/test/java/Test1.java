@@ -57,8 +57,6 @@ public class Test1 {
         element = driver.findElement(By.xpath("//body/div[1]/div[4]/div/div[1]/div[1]/div[2]/div[2]/div/span/span/input")); // Ввод Dell
         element.sendKeys("Dell", ENTER);
         element.sendKeys(Keys.TAB, Keys.SPACE);
-
-        //element = driver.findElement(By.xpath("//*[@for='glf-7893318-153080']")); // Dell
         element.click();
         //Подобрать
         element = driver.findElement(By.xpath("/html/body/div[1]/div[4]/div/div[1]/div[4]/a[2]")); // Подбор
@@ -69,8 +67,7 @@ public class Test1 {
         Assert.assertEquals(12,list.size());
         // Первый элемент в списке
         element = driver.findElement(By.xpath("/html/body/div[1]/div[4]/div[2]/div[1]/div[2]/div/div[1]/div[1]/div[4]/div[1]/div/a"));
-        String name1 = element.getText();
-        name1 = name1.substring(8);
+        String name1 = element.getText().substring(8);
         //Поиск товара
         element = driver.findElement(By.id("header-search"));
         element.sendKeys("\"" + name1 + "\"");
@@ -79,8 +76,6 @@ public class Test1 {
         element = driver.findElement(By.cssSelector("h1.title.title_size_28.title_bold_yes"));
         String name2 = element.getText();
         Assert.assertEquals(name1,name2);
-
-
         // Закрываем браузер
         driver.quit();
 
